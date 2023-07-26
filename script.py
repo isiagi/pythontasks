@@ -1,11 +1,11 @@
 # 1 Create a function named print_numbers().
 
-# def print_numbers():
-#     print(5)
-#     print(100)
+def print_numbers():
+    print(5)
+    print(100)
 
-# print_numbers()
-# print_numbers()
+print_numbers()
+print_numbers()
 
 # 2 Write a program to check if the student passed or failed his/her examination by creating a function..
 
@@ -56,7 +56,7 @@
 #     if(num == 1):
 #         print("1 is not a prime number")
 #     elif num > 1:
-#         for i in range(2, num):
+#         for i in range(2, num + 1):
 #             print(i)
 #             if (num % i ) == 0:
 #                 flag = True
@@ -91,3 +91,73 @@
 #     print("Unable to convert user input to integer")
 # else:
 #     calculate_pow(num_marks)
+
+
+# 7. Write a program to print a person's information.
+
+# country = input("Please enter country!")
+
+# def display_info(name, location):
+#     print(f"{name}\n{location}")
+
+# display_info("Magnus", country)
+
+
+# 8. Write a program to find the sum of N natural numbers by creating a function.
+
+# def find_sum(n):
+#     count = 0
+#     for i in range(1,n + 1):
+#         print("===count===", count)
+#         print("===n===", i)
+#         count += i
+#         print("===countnew===", count)
+#     else:
+#         print(count)
+
+# find_sum(5)
+
+
+# 9. Write a program to compute the area of a circle using a function.
+
+# pi_value = 3.14
+
+# def compute_area(radius, pi):
+#     area = pi * radius**2
+
+#     print(area)
+
+# compute_area(10, pi_value)
+
+
+# 10. Create a function named call_me() that takes two arguments a and b.
+
+# import sys
+
+# n = input("Enter Integer Number: ")
+
+# try:
+#     num = int(n)
+# except:
+#     sys.exit("Input can't be convert to  number")
+    
+
+# def call_me(a = 5, b = 10):
+
+#     print(a)
+#     print(b)
+
+# call_me(num)
+
+
+# 11. Create a function named print_items() that can take any number of arguments.
+
+# text1 = "hello"
+# text2 = "world"
+
+# def print_items(*argv):
+#     for arg in argv:
+#         print(arg)
+
+# print_items(text1)
+# print_items(text1, text2)
