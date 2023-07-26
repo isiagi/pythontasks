@@ -1,4 +1,6 @@
-# 1 Create a function named print_numbers().
+# TIA PYTHON PRACTISE QUESTIONS
+
+**1 Create a function named print_numbers().**
 
 ```
 def print_numbers():
@@ -10,7 +12,7 @@ print_numbers()
 
 ```
 
-# 2 Write a program to check if the student passed or failed his/her examination by creating a function..
+**2 Write a program to check if the student passed or failed his/her examination by creating a function..**
 
 ```
 user_input = input("Enter Marks Please: ")
@@ -33,7 +35,7 @@ checkMarks(user_input)
 ```
 
 
-# 3. Write a program to check if the two arguments passed are equal or not by creating a function.
+**3. Write a program to check if the two arguments passed are equal or not by creating a function.**
 
 ```
 def my_function(num1, num2):
@@ -46,7 +48,7 @@ my_function(1, "1")
 
 ```
 
-# 4. Write a program to print full name with space in between using a function.
+**4. Write a program to print full name with space in between using a function.**
 
 ```
 def full_name(first_name, last_name):
@@ -61,7 +63,7 @@ full_name("Geofrey", 90)
 
 ```
     
-# 5. Write a program to check whether a number is prime or not using a function.
+**5. Write a program to check whether a number is prime or not using a function.**
 
 ```
 def check_prime(num):
@@ -88,7 +90,7 @@ check_prime(6)
 ```
 
 
-# 6. Write a program to calculate the power of an integer using a function.
+**6. Write a program to calculate the power of an integer using a function.**
 
 ```
 num = input("Enter Number: ")
@@ -111,7 +113,7 @@ else:
 ```
 
 
-# 7. Write a program to print a person's information.
+**7. Write a program to print a person's information.**
 
 ```
 country = input("Please enter country!")
@@ -124,7 +126,7 @@ display_info("Magnus", country)
 ```
 
 
-# 8. Write a program to find the sum of N natural numbers by creating a function.
+**8. Write a program to find the sum of N natural numbers by creating a function.**
 
 ```
 def find_sum(n):
@@ -142,7 +144,7 @@ find_sum(5)
 ```
 
 
-# 9. Write a program to compute the area of a circle using a function.
+**9. Write a program to compute the area of a circle using a function.**
 
 ```
 pi_value = 3.14
@@ -157,7 +159,7 @@ compute_area(10, pi_value)
 ```
 
 
-# 10. Create a function named call_me() that takes two arguments a and b.
+**10. Create a function named call_me() that takes two arguments a and b.**
 
 ```
 import sys
@@ -180,7 +182,7 @@ call_me(num)
 ```
 
 
-# 11. Create a function named print_items() that can take any number of arguments.
+**11. Create a function named print_items() that can take any number of arguments.**
 
 ```
 text1 = "hello"
