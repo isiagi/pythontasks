@@ -73,3 +73,16 @@ def armstrong(num):
         print("It is an not Armstrong Number")
 
 armstrong(371)   
+
+# 8. Write a Python program to find the number of occurrences of each word in the string.
+
+def occur(str):
+    obj = {}
+    z = str.split()
+    for item in z:
+        obj[item] = str.count(item)
+
+    print(obj)
+        
+
+occur("Captain America is Captain of America")
