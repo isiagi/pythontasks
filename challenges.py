@@ -86,3 +86,30 @@ def occur(str):
         
 
 occur("Captain America is Captain of America")
+
+# 9. A car needs 10 times more fuel than the distance it covers. But the car always has a minimum of 100 ltr of fuel in
+# stock
+
+def fuel(total, extra = 100):
+    total_required_fuel = total * 10
+    extra_fuel = total_required_fuel - extra
+
+    print((total_required_fuel, extra_fuel))
+
+fuel(310)
+
+# 10. Given a list of numbers, find the sums of even numbers and odd numbers.
+
+def even_odd(arr):
+    even_sum = 0
+    odd_sum = 0
+
+    for item in arr:
+        if item % 2 == 0:
+            even_sum += item
+        else:
+            odd_sum += item
+    
+    print((odd_sum, even_sum))
+
+even_odd([51, 75, 69, 36, 75, 44, 82, 36])
