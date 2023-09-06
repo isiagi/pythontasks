@@ -5,7 +5,7 @@ class BankAccount:
     def __init__(self, account_number, balance=0):
         # Initialize a bank account with an account number and an optional initial balance
         self.account_number = account_number
-        self.balance = balance
+        self.__balance = balance  # Double underscore indicates private attribute
 
     def find_user(self):
         # Find a user in the bank_users list based on the account number
