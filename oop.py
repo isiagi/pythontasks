@@ -1,61 +1,56 @@
-import operator
-
-
-class Bank_Account:
+class BankAccount:
     # A class-level variable representing bank users
     bank_users = [{"acc_no": 1, "acc_balance": 100}, {"acc_no": 2, "acc_balance": 0}]
 
     def __init__(self, account_number, balance=0):
-        # Constructor initializes the account with an account number and balance
+        # Initialize a bank account with an account number and an optional initial balance
         self.account_number = account_number
-        self.__balance = balance  # Double underscore indicates private attribute
+        self.balance = balance
+
+    def find_user(self):
+        # Find a user in the bank_users list based on the account number
+        for user in self.bank_users:
+            if user["acc_no"] == self.account_number:
+                return user
+        return None
 
     def check_user(self):
-        # Check if the user's account number is registered
-        user_num = operator.itemgetter("acc_no")
-        users = map(user_num, self.bank_users)
-
-        user_acc_num = self.account_number
-
-        if user_acc_num not in users:
-            print(f"Acount number {user_acc_num} is not registered")
-            return
+        # Check if the user with the specified account number exists
+        user = self.find_user()
+        if user is None:
+            print(f"{self.account_number} account number is not registered")
+            return False
+        return True
 
     def deposit(self, amount, name):
-        # Deposit money into the account
-        self.check_user()
-
-        for item in self.bank_users:
-            if item["acc_no"] == self.account_number:
-                item["acc_balance"] += int(amount)
-                print(
-                    f'{name} deposited {amount} and new balance is {item.get("acc_balance")}'
-                )
-                return
+        # Deposit money into the account if the user exists
+        if self.check_user():
+            user = self.find_user()
+            user["acc_balance"] += amount
+            print(f'{name} deposited {amount} and new balance is {user["acc_balance"]}')
 
     def withdrawal(self, amount, name):
-        # Withdraw money from the account
-        self.check_user()
-        for item in self.bank_users:
-            if item["acc_no"] == self.account_number:
-                item["acc_balance"] -= int(amount)
+        # Withdraw money from the account if the user exists and has sufficient balance
+        if self.check_user():
+            user = self.find_user()
+            if user["acc_balance"] >= amount:
+                user["acc_balance"] -= amount
                 print(
-                    f'{name} withdrew {amount} and new balance is {item.get("acc_balance")}'
+                    f'{name} withdrew {amount} and new balance is {user["acc_balance"]}'
                 )
-                return
+            else:
+                print(f"Insufficient balance for {name}")
 
     def account_balance(self, name):
-        # Check and print the account balance
-        self.check_user()
-        for item in self.bank_users:
-            if item["acc_no"] == self.account_number:
-                print(f'{name} Account balance is {item["acc_balance"]}')
-                return
+        # Check and print the account balance for the user if they exist
+        if self.check_user():
+            user = self.find_user()
+            print(f'{name} Account balance is {user["acc_balance"]}')
 
 
 # Create two bank account instances
-tom_account = Bank_Account(1)
-sarah_account = Bank_Account(5)
+tom_account = BankAccount(1)
+sarah_account = BankAccount(2)
 
 # Perform deposit and withdrawal operations on the accounts
 sarah_account.account_balance("Sarah")
